@@ -26,11 +26,12 @@ h2{
 
 .card{
     position: relative;
-    width: 30% !important;
+    width: 27% !important;
     background-image: linear-gradient(to top, #283048, #859398);
     border: none;
     box-shadow: 0 8px 10px #1b1b2e;
     transition: all .3s ease;
+    margin-bottom: 40px !important;
 }
 
 .card:hover{
