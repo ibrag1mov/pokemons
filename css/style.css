@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: linear-gradient(to right, #c04848, #480048); 
+    font-family: 'EB Garamond';
+    font-weight: 400;
+}
+
+h2{
+    font-weight: 700;
+}
+
+.logo{
+    width: 50%;
+    display: inline-block;
+    margin: 0 auto;
+    
+}
+
+.card{
+    position: relative;
+    width: 30% !important;
+    background-image: linear-gradient(to top, #283048, #859398);
+    border: none;
+    box-shadow: 0 8px 10px #1b1b2e;
+    transition: all .3s ease;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.pocemon-id{
+    position: absolute;
+    top: 5px;
+    display: none;
+    transition: all .3s ease;
+}
+
+.card:hover .pocemon-id{
+    display: block;
+}
+
+.size{
+    font-size: 12px;
+    text-align: center;
+}
+.time{
+    position: relative;
+    bottom: -10px;
+}
+
