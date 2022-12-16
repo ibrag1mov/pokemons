@@ -36,28 +36,5 @@ function pokemonFunc(pokemons){
     }
     
 }
-var types = [
-    "Poison","Fire","Grass","Water","Electric","Bug","Normal","Ground","Fighting","Psychic","Rock","Ice","Ghost","Flying","Dragon",
-  ];
-  
-  var pokemonsVar = pokemons;
-  
-  var elSelect = document.querySelector("#select-js");
-  for (var i of types) {
-    var elOption = document.createElement("option");
-    elOption.value = i;
-    elOption.textContent = i;
-    elSelect.appendChild(elOption);
-  }
-  
-  elSelect.addEventListener("change", (element) => {
-    var type = element.target.value;
-    pokemonsVar = pokemons.filter((pokemon) => {
-      return pokemon.type.includes(type);
-    });
-    pokemonFunc(pokemonsVar);
-  });
-  
-pokemonFunc(pokemonsVar);
 
 
