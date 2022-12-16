@@ -1,5 +1,4 @@
 var cardWrapper=document.querySelector('.card-wrapper');
-// let elSelect=document.querySelector('.js-select');
 
 function pokemonFunc(pokemons){
     for(pokemon of pokemons){
@@ -53,8 +52,8 @@ var types = [
   
   elSelect.addEventListener("change", (element) => {
     var type = element.target.value;
-    pokemonsVar = pokemons.filter((pok) => {
-      return pok.type.includes(type);
+    pokemonsVar = pokemons.filter((pokemon) => {
+      return pokemon.type.includes(type);
     });
     pokemonFunc(pokemonsVar);
   });
