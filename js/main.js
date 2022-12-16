@@ -38,7 +38,6 @@ function newcards (array, node){
 
 newcards(pokemons, cardWrapper);
 
-console.log(elSelect.value);
 
 
 let arr=[];
