@@ -75,11 +75,8 @@ h2{
     bottom: -10px;
 }
 
-.input-wrapper{
+.card-wrapper{
     display: flex;
-    justify-content: space-between;
-}
-
-.search-btn{
-    width: 20%;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
 }
