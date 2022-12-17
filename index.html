@@ -19,12 +19,18 @@
       <div class="row py-5 d-flex hero">
         <img class="logo" src="images/logo.png" alt="logo">
         <div class="selector">
-          <select class="form-select js-select w-75 d-block mx-auto mb-4">
-            <option value="All">All</option>
-          </select>
+          <form class="form">
+
+            <select class="form-select js-select w-75 d-block mx-auto mb-4">
+              <option value="All">All</option>
+            </select>
           
-            <input class="w-75 form-control search mx-auto" type="text" name="search" id="js-search" placeholder="Search">
-          
+            <div class="input-wrapper w-75  mx-auto">
+              <input class=" w-75 form-control search" type="search" name="search" id="js-search" placeholder="Search">
+              <button class="btn bg-primary text-white search-btn">Search</button>
+            </div>
+            
+          </form>
         </div>
       </div>
     </div>

@@ -75,3 +75,11 @@ h2{
     bottom: -10px;
 }
 
+.input-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-btn{
+    width: 20%;
+}

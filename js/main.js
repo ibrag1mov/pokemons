@@ -12,11 +12,11 @@ function newcards (array, node){
         card.innerHTML=`
             <strong class="pocemon-id px-4 fs-2">${pokemon.id}</strong>
             <div class="text-center mt-4">
-                <img src="${pokemon.img}" alt="${pokemon.name}">
+            <img src="${pokemon.img}" alt="${pokemon.name}">
             </div>
             <h2 class="text-center my-2">${pokemon.name}</h2>
             <div class="d-flex justify-content-evenly">
-                <p class="fs-5 text-center">weight 
+            <p class="fs-5 text-center">weight 
                     <span class="d-block size"> ${pokemon.weight} </span>
                 </p>
                 <p class="fs-5">height
@@ -74,3 +74,24 @@ if(elSelect.value!=="All"){
 }
     
 })
+
+// search
+
+let elFrom = document.querySelector('.form');
+let elInput = document.querySelector('input');
+
+let newArray=[];
+
+elFrom.addEventListener('input',(evt)=>{
+    evt.preventDefault();
+    cardWrapper.innerHTML=''
+    let elInputValue=elInput.value.toLocaleLowerCase();
+
+    pokemons.forEach((el)=>{
+        if(el.name.toLocaleLowerCase().includes(elInputValue)){
+            newArray.push(el)
+        }
+    });
+    newcards(newArray, cardWrapper)
+    newArray=[]
+});
