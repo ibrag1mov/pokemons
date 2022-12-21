@@ -95,3 +95,27 @@ elFrom.addEventListener('input',(evt)=>{
     newcards(newArray, cardWrapper)
     newArray=[]
 });
+
+// sort
+
+let elSelect2=document.querySelector('#sort');
+
+
+elSelect2.addEventListener('change',(e)=>{
+    let elSelect2Val=elSelect2.value;
+    if(elSelect2Val != "Sort"){
+        if(elSelect2Val == "A-Z"){
+            const pokemonSort = pokemons.sort((a, b)=> a.name.charCodeAt(0)-b.name.charCodeAt(0));
+            newcards(pokemonSort, cardWrapper);
+        }
+        else if(elSelect2Val == "Z-A"){
+            const pokemonSort2 = pokemons.sort((a, b)=> b.name.charCodeAt(0)-a.name.charCodeAt(0));
+            newcards(pokemonSort2, cardWrapper);
+        }
+    }
+    else{
+        window.location.reload();
+    }
+    
+    e.preventDefault();
+})
